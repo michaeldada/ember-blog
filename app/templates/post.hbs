@@ -15,4 +15,10 @@
   <button {{action 'delete' model}}>Trash</button>
 
   <hr>
+
+  {{create-new-comment newComment="newComment" post=model}}
+
+  <h3>Comments:</h3>
+  
+  {{comment-display post=model}}
 </article>

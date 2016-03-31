@@ -1,0 +1,15 @@
+{{#if newCommentForm}}
+<h3>Add Comment</h3>
+
+<form id="newComment">
+  <p>
+    {{input value=user placeholder="Username"}}
+    {{textarea value=content placeholder="Leave Your Comment Here.."}}
+  </p>
+  <p>
+    <button {{action "newComment"}}>Submit</button>
+  </p>
+</form>
+{{else}}
+<button {{action 'newCommentForm'}}>Comment</button>
+{{/if}}

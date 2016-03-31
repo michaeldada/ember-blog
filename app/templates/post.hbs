@@ -1,0 +1,18 @@
+<article>
+  <br>
+  <h2>{{model.title}}</h2>
+  <p>
+    {{model.text}}
+  </p>
+  <i>
+    (Posted on {{model.createdDate}}
+    by {{model.author}})
+  </i>
+  <br><br><br>
+
+  {{edit-post post=model edit="edit"}}
+
+  <button {{action 'delete' model}}>Trash</button>
+
+  <hr>
+</article>

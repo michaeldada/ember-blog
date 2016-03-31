@@ -1,6 +1,6 @@
 <article>
   <br>
-  <h2>{{attrs.post.title}}</h2>
+  <h2>{{#link-to 'post' post.id}}{{attrs.post.title}}{{/link-to}}</h2>
   <p>
     {{attrs.post.text}}
   </p>
@@ -9,10 +9,6 @@
     by {{attrs.post.author}})
   </i>
   <br><br><br>
-
-  {{edit-post post=post edit="edit"}}
-
-  <button {{action 'delete' post}}>Trash</button>
 
   <hr>
 </article>

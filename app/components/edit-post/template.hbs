@@ -1,0 +1,18 @@
+{{#if editPostForm}}
+<h3>Edit Post</h3>
+
+<form id="editPost">
+  <p>
+    {{input value=title placeholder=post.title}}
+    {{input value=author placeholder=post.author}}
+  </p>
+  <p>
+    {{textarea value=text placeholder=post.text rows="10" cols="140"}}
+  </p>
+  <p>
+    <button {{action "edit" post}}>Edit</button>
+  </p>
+</form>
+{{else}}
+  <button {{action 'editPostForm'}}>Edit</button>
+{{/if}}

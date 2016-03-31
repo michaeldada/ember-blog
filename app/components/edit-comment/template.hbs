@@ -1,0 +1,14 @@
+{{#if editCommentForm}}
+<h3>Edit Comment</h3>
+
+<form id="editCommentForm">
+  <p>
+    {{input value=user placeholder=comment.user}}
+    {{input value=content placeholder=comment.content}}
+  </p>
+
+  <button {{action "editComment" comment}}>Edit Comment</button>
+</form>
+{{else}}
+  <button {{action "editCommentForm"}}>Edit Comment</button>
+{{/if}}

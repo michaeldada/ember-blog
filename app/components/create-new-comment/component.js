@@ -8,6 +8,7 @@ export default Ember.Component.extend({
     newComment: function() {
       var params = {
         user: this.get('user'),
+        date: new Date(),
         content: this.get('content'),
         post: this.get('post')
       };

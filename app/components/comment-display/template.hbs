@@ -1,9 +1,10 @@
 
 <ul>
   {{#each post.comments as |comment|}}
-  <li>{{comment.user}}</li>
+  <li>User:{{comment.user}}</li>
   <li>{{comment.date}}</li>
   <li>{{comment.content}}</li>
   {{edit-comment comment=comment editComment="editComment"}}
+  <button {{action 'delete' comment}}>Delete Comment</button>
   {{/each}}
 </ul>

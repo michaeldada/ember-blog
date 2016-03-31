@@ -9,6 +9,12 @@ export default Ember.Component.extend({
         }
       });
       comment.save();
+    },
+    delete(comment) {
+      var post = this.get('post');
+      if(confirm('Are you sure you want to delete this comment?')) {
+        this.sendAction('deleteComment', comment, post);
+      }
     }
   }
 });

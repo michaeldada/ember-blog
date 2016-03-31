@@ -1,4 +1,4 @@
 {{#each model as |post|}}
-  {{#blog-post post=post}}{{/blog-post}}
+  {{#blog-post post=post delete="delete"}}{{/blog-post}}
 {{/each}}
-{{#create-new-post newPost=model createPost="createPost"}}{{/create-new-post}}
+{{#create-new-post post=post createPost="createPost"}}{{/create-new-post}}

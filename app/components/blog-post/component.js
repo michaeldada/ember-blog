@@ -12,6 +12,11 @@ export default Ember.Component.extend({
         }
       });
       post.save();
+    },
+    delete(post) {
+      if(confirm('Are you sure you want to delete this post?')) {
+        this.sendAction('delete', post);
+      }
     }
   }
 });

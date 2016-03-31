@@ -9,6 +9,10 @@
     by {{attrs.post.author}})
   </i>
   <br><br><br>
+
   {{edit-post post=post edit="edit"}}
+
+  <button {{action 'delete' post}}>Trash</button>
+
   <hr>
 </article>
